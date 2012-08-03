@@ -81,7 +81,7 @@ endfunction
 
 function! gf#diff#parse_diff_header_line(line)  "{{{2
   " Line -> Maybe (LineNo, LineNo)
-  let parts = matchlist(a:line, '\v^diff \-\-git %(a\/)?(\S+) %(b\/)?(\S+)$')
+  let parts = matchlist(a:line, '\v^diff \-\-git %(i\/)?(\S+) %(w\/)?(\S+)$')
   return parts == [] ? 0 : parts[1:2]
 endfunction
 
